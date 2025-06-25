@@ -102,10 +102,10 @@ class DatabaseClient:
             return db_path, "duckdb"
 
         # Handle local database paths as the last check
-        if not os.path.exists(db_path):
-            raise FileNotFoundError(
-                f"The local database path `{db_path}` does not exist."
-            )
+        # if not os.path.exists(db_path):
+        #     raise FileNotFoundError(
+        #         f"The local database path `{db_path}` does not exist."
+        #     )
         return db_path, "duckdb"
 
     def _execute(self, query: str) -> str:
